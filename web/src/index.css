@@ -17,6 +17,10 @@
   body {
     @apply text-white;
   }
+
+  svg {
+    @apply fill-current;
+  }
  }
  @layer components {
  }
