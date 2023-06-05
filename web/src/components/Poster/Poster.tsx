@@ -1,8 +1,11 @@
-const Poster = () => {
+const Poster = ({ alt, src }) => {
   return (
     <div>
-      <h2>{'Poster'}</h2>
-      <p>{'Find me in ./web/src/components/Poster/Poster.tsx'}</p>
+      <img
+        src={src}
+        alt={alt}
+        className="rounded-2xl h-60 w-40 object-cover drop-shadow-poster"
+      />
     </div>
   )
 }

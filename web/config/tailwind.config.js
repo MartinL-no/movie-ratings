@@ -17,6 +17,9 @@ module.exports = {
         eerieBlack: '#1e1e1e' /* almost black */,
         jet: '#353535' /* lighter - almost black rollover */,
       },
+      dropShadow: {
+        poster: '0px 0px 4px rgba(0, 0, 0, 0.25)',
+      },
     },
     fontFamily: {
       modern: ['Abril Fatface', 'cursive'],

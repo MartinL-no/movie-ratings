@@ -10,16 +10,20 @@
 // ```
 //
 // See https://storybook.js.org/docs/react/writing-stories/args.
-
 import type { ComponentMeta } from '@storybook/react'
 
+import spiderman from './images/spiderman.jpeg'
 import Poster from './Poster'
-
-export const generated = () => {
-  return <Poster />
-}
 
 export default {
   title: 'Components/Poster',
   component: Poster,
 } as ComponentMeta<typeof Poster>
+
+const Template = (args) => <Poster {...args} />
+
+export const Primary = Template.bind({})
+Primary.args = {
+  src: spiderman,
+  alt: 'Spiderman',
+}
