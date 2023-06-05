@@ -13,7 +13,7 @@
  * END --- SETUP TAILWINDCSS EDIT
  */
 
- @layer base {
+@layer base {
   body {
     @apply text-white;
   }
@@ -22,7 +22,9 @@
     @apply fill-current;
   }
  }
- @layer components {
- }
- @layer utilities {
+@layer components { }
+@layer utilities {
+  .center {
+    @apply flex items-center justify-center;
+  }
  }
