@@ -9,7 +9,7 @@ export default {
   component: PercentSign,
 } as ComponentMeta<typeof PercentSign>
 
-const Template = (args) => <PercentSign {...args} />
+const Template = (args: PercentSignProps) => <PercentSign {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {

@@ -1,12 +1,30 @@
 interface PercentSignProps {
-  // Props
+  size?: 'small' | 'medium' | 'large' | 'xlarge'
 }
 
-const PercentSign = ({}: PercentSignProps) => {
+const PercentSign = ({ size = 'small' }: PercentSignProps) => {
+  const sizes = {
+    small: {
+      height: 18,
+      width: 13,
+    },
+    medium: {
+      height: 60,
+      width: 43,
+    },
+    large: {
+      height: 123,
+      width: 68,
+    },
+    xlarge: {
+      height: 123,
+      width: 68,
+    },
+  }
   return (
     <svg
-      width="44"
-      height="60"
+      width={sizes[size].width}
+      height={sizes[size].height}
       viewBox="0 0 44 60"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
