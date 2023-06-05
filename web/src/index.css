@@ -12,3 +12,13 @@
 /**
  * END --- SETUP TAILWINDCSS EDIT
  */
+
+ @layer base {
+  body {
+    @apply text-white;
+  }
+ }
+ @layer components {
+ }
+ @layer utilities {
+ }
