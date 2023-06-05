@@ -27,3 +27,33 @@ Primary.args = {
   src: spiderman,
   alt: 'Spiderman',
 }
+
+export const Large = Template.bind({})
+Large.args = {
+  src: spiderman,
+  alt: 'Spiderman',
+  size: 'large',
+}
+
+export const Medium = Template.bind({})
+Medium.args = {
+  src: spiderman,
+  alt: 'Spiderman',
+  size: 'large',
+}
+
+export const Small = Template.bind({})
+Small.args = {
+  src: spiderman,
+  alt: 'Spiderman',
+  size: 'small',
+}
+
+export const WithText = Template.bind({})
+WithText.args = {
+  src: spiderman,
+  alt: 'Spiderman',
+  size: 'large',
+  heading: 'My Heading',
+  subheading: 'My Subheading',
+}
