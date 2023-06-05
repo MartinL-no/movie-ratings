@@ -3,17 +3,33 @@ import { PercentSign } from './PercentSign'
 interface PercentageProps {
   percentage: number
   ring?: boolean
+  size?: 'small' | 'medium' | 'large' | 'xlarge'
 }
 
-const Percentage = ({ percentage, ring = true }: PercentageProps) => {
+const Percentage = ({
+  percentage,
+  ring = true,
+  size = 'small',
+}: PercentageProps) => {
+  const ringSizes = {
+    small: 110,
+    medium: 300,
+    large: 0,
+    xlarge: 0,
+  }
   return (
-    <div className="relative inline-block">
+    <div
+      className={`relative inline-block
+    ${percentage <= 50 && 'text-oriolesOrange'}
+    ${50 < percentage && percentage < 70 && 'text-lemonLime'}
+    ${70 < percentage && 'text-chartreuse'}`}
+    >
       {ring && (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/svg"
-          width="230"
-          height="230"
+          width={ringSizes[size]}
+          height={ringSizes[size]}
           viewBox="0 0 230 230"
         >
           <circle
@@ -30,18 +46,29 @@ const Percentage = ({ percentage, ring = true }: PercentageProps) => {
             r="100"
             fill="none"
             strokeWidth="8"
-            className="stroke-oriolesOrange"
+            className="stroke-current"
             strokeDasharray={`calc((${percentage} / 100) * 628.32) 628.32`}
             transform="rotate(-90) translate(-230)"
           />
         </svg>
       )}
       <div
-        className={`center gap-x-1 ${ring && 'absolute inset-0 h-full w-full'}`}
+        className={`center gap-x-1 ${
+          ring && ringSizes[size] > 0 && 'absolute inset-0 h-full w-full'
+        }`}
       >
-        <div className="font-modern leading-none">{percentage}</div>
-        <div>
-          <PercentSign />
+        <div
+          className={`font-modern leading-none
+          ${size === 'small' && 'text-5xl'}
+          ${size === 'medium' && 'text-[9.25rem]'}
+          ${size === 'large' && 'text-[10rem]'}
+          ${size === 'xlarge' && 'text-[16rem]'}
+      `}
+        >
+          {percentage}
+        </div>
+        <div className="relative -top-2">
+          <PercentSign size={size} />
         </div>
       </div>
     </div>
