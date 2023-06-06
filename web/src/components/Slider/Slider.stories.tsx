@@ -9,7 +9,7 @@ export default {
   component: Slider,
 } as ComponentMeta<typeof Slider>
 
-const Template = (args) => <Slider {...args} />
+const Template = (args: SliderProps) => <Slider {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
