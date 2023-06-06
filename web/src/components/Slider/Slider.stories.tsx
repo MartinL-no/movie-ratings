@@ -2,6 +2,8 @@
 
 import type { ComponentMeta } from '@storybook/react'
 
+import spiderman from '../Poster/images/spiderman.jpeg'
+
 import { Slider, type SliderProps } from './Slider'
 
 export default {
@@ -13,5 +15,26 @@ const Template = (args: SliderProps) => <Slider {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
+  label: 'Most  Popular',
+  slideSize: 'small',
+  viewAllLink: '/movies',
+  slides: [
+    {
+      src: spiderman,
+      alt: 'Hocus Pocus',
+    },
+    {
+      src: spiderman,
+      alt: 'Hocus Pocus',
+    },
+    {
+      src: spiderman,
+      alt: 'Hocus Pocus',
+    },
+    {
+      src: spiderman,
+      alt: 'Hocus Pocus',
+    },
+  ],
   // args
 }
