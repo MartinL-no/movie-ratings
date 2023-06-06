@@ -13,14 +13,14 @@
 import type { ComponentMeta } from '@storybook/react'
 
 import spiderman from './images/spiderman.jpeg'
-import Poster from './Poster'
+import { Poster, PosterProps } from './Poster'
 
 export default {
   title: 'Components/Poster',
   component: Poster,
 } as ComponentMeta<typeof Poster>
 
-const Template = (args) => <Poster {...args} />
+const Template = (args: PosterProps) => <Poster {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {

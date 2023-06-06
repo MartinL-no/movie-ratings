@@ -33,4 +33,4 @@ const Poster = ({
   )
 }
 
-export default Poster
+export { Poster, Props as PosterProps }
