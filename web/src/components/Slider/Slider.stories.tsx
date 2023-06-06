@@ -35,6 +35,38 @@ Primary.args = {
       src: spiderman,
       alt: 'Hocus Pocus',
     },
+    {
+      src: spiderman,
+      alt: 'Hocus Pocus',
+    },
+    {
+      src: spiderman,
+      alt: 'Hocus Pocus',
+    },
+    {
+      src: spiderman,
+      alt: 'Hocus Pocus',
+    },
+    {
+      src: spiderman,
+      alt: 'Hocus Pocus',
+    },
+    {
+      src: spiderman,
+      alt: 'Hocus Pocus',
+    },
+    {
+      src: spiderman,
+      alt: 'Hocus Pocus',
+    },
+    {
+      src: spiderman,
+      alt: 'Hocus Pocus',
+    },
+    {
+      src: spiderman,
+      alt: 'Hocus Pocus',
+    },
   ],
   // args
 }
