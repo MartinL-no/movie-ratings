@@ -21,3 +21,21 @@ Primary.args = {
   slides: slides,
   // args
 }
+
+export const Medium = Template.bind({})
+Medium.args = {
+  label: 'Most  Popular',
+  slideSize: 'medium',
+  viewAllLink: '/movies',
+  slides: slides,
+  // args
+}
+
+export const Large = Template.bind({})
+Large.args = {
+  label: 'Most  Popular',
+  slideSize: 'large',
+  viewAllLink: '/movies',
+  slides: slides,
+  // args
+}
