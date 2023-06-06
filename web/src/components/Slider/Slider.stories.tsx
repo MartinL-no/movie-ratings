@@ -5,7 +5,7 @@ import type { ComponentMeta } from '@storybook/react'
 import spiderman from '../Poster/images/spiderman.jpeg'
 
 import { Slider, type SliderProps } from './Slider'
-
+import { slides } from './Slider.mocks'
 export default {
   title: 'Components/Slider',
   component: Slider,
@@ -18,55 +18,6 @@ Primary.args = {
   label: 'Most  Popular',
   slideSize: 'small',
   viewAllLink: '/movies',
-  slides: [
-    {
-      src: spiderman,
-      alt: 'Hocus Pocus',
-    },
-    {
-      src: spiderman,
-      alt: 'Hocus Pocus',
-    },
-    {
-      src: spiderman,
-      alt: 'Hocus Pocus',
-    },
-    {
-      src: spiderman,
-      alt: 'Hocus Pocus',
-    },
-    {
-      src: spiderman,
-      alt: 'Hocus Pocus',
-    },
-    {
-      src: spiderman,
-      alt: 'Hocus Pocus',
-    },
-    {
-      src: spiderman,
-      alt: 'Hocus Pocus',
-    },
-    {
-      src: spiderman,
-      alt: 'Hocus Pocus',
-    },
-    {
-      src: spiderman,
-      alt: 'Hocus Pocus',
-    },
-    {
-      src: spiderman,
-      alt: 'Hocus Pocus',
-    },
-    {
-      src: spiderman,
-      alt: 'Hocus Pocus',
-    },
-    {
-      src: spiderman,
-      alt: 'Hocus Pocus',
-    },
-  ],
+  slides: slides,
   // args
 }
