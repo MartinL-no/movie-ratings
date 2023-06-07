@@ -29,6 +29,9 @@ module.exports = {
       modern: ['Abril Fatface', 'cursive'],
       sansSerif: ['Inter', 'sans-serif'],
     },
+    maxWidth: {
+      pageWidth: '1280px',
+    },
   },
   plugins: [],
 }
