@@ -4,15 +4,18 @@ import { Ruler } from '../Ruler/'
 import { slides as data } from '../Slider/Slider.mocks'
 
 interface NavProps {
-  // Props
+  handleClick: () => void
 }
 
-const Nav = ({}: NavProps) => {
+const Nav = ({ handleClick }: NavProps) => {
   return (
     <div className="h-screen w-screen overflow-scroll bg-almostBlack bg-[url('/images/flowers.png')] bg-left-bottom bg-no-repeat">
       <div className="mx-auto grid max-w-pageWidth grid-cols-[minmax(0,_1fr)_minmax(0,_3fr)] gap-x-5 gap-y-8">
         <div className="col-span-2 pt-8">
-          <button className="font-medium-uppercase float-right flex items-center gap-x-3 hover:text-lemonLime">
+          <button
+            onClick={handleClick}
+            className="font-medium-uppercase float-right flex items-center gap-x-3 hover:text-lemonLime"
+          >
             Close
             <Icon name="close" size={48} />
           </button>
