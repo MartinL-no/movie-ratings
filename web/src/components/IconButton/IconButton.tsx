@@ -1,13 +1,35 @@
-interface IconButtonProps {
-  // Props
+import { useState } from 'react'
+
+import { Icon, type IconProps } from '../Icon/Icon'
+
+interface IconButtonProps extends IconProps {
+  toggled?: boolean
+  handleClick: () => void
 }
 
-const IconButton = ({}: IconButtonProps) => {
+function IconButton({
+  handleClick,
+  name,
+  size,
+  toggled = false,
+}: IconButtonProps) {
+  const [isToggled, setIsToggled] = useState<boolean>(toggled)
+
+  const toggleClick = () => {
+    setIsToggled((prevValue) => !prevValue)
+    handleClick()
+  }
   return (
-    <div>
-      <h2>{'IconButton'}</h2>
-      <p>{'Find me in ./web/src/components/IconButton/IconButton.tsx'}</p>
-    </div>
+    <button
+      onClick={toggleClick}
+      className={`center h-8 w-8 rounded-full border-2 ${
+        isToggled
+          ? `border-turquiose bg-turquoise text-black`
+          : `border-dolphin text-dolphin`
+      }`}
+    >
+      <Icon name={name} size={size} />
+    </button>
   )
 }
 
