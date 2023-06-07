@@ -11,7 +11,13 @@ export default {
 
 const Template = (args: IconButtonProps) => <IconButton {...args} />
 
-export const Primary = Template.bind({})
-Primary.args = {
-  // args
+export const ToggleOff = Template.bind({})
+ToggleOff.args = {
+  name: 'bookmark',
+}
+
+export const ToggleOn = Template.bind({})
+ToggleOn.args = {
+  name: 'bookmark',
+  toggled: true,
 }
