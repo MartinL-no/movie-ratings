@@ -9,41 +9,44 @@ interface NavProps {
 
 const Nav = ({}: NavProps) => {
   return (
-    <div>
-      <div>
-        <button>
-          Close
-          <Icon name="close" size={48} />
-        </button>
+    <div className="h-screen w-screen overflow-scroll bg-almostBlack bg-[url('/images/flowers.png')] bg-left-bottom bg-no-repeat">
+      <div className="mx-auto grid max-w-pageWidth grid-cols-[minmax(0,_1fr)_minmax(0,_3fr)] gap-x-5 gap-y-8">
+        <div className="col-span-2 pt-8">
+          <button className="font-medium-uppercase float-right flex items-center gap-x-3 hover:text-lemonLime">
+            Close
+            <Icon name="close" size={48} />
+          </button>
+        </div>
+
         <Ruler />
         <Ruler />
         <div>
-          <nav>
+          <nav className="flex h-full flex-col justify-between">
             <ul>
-              <li>
+              <li className="nav-item">
                 <a href="#">Home</a>
               </li>
-              <li>
+              <li className="nav-item">
                 <a href="#">Play Lists</a>
               </li>
-              <li>
+              <li className="nav-item">
                 <a href="#">Watch Lists</a>
               </li>
             </ul>
             <ul>
-              <li>
+              <li className="nav-item">
                 <a href="#">Settings</a>
               </li>
-              <li>
+              <li className="nav-item">
                 <a href="#">Log Out</a>
               </li>
             </ul>
           </nav>
         </div>
         <div>
-          <h3>Recently Viewed</h3>
+          <h3 className="mb-2 text-lg font-bold">Recently Viewed</h3>
           <div>
-            <ul>
+            <ul className="grid grid-cols-5 gap-5">
               {data &&
                 data.map((item, index) => (
                   <li key={index}>

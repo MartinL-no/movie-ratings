@@ -3,12 +3,7 @@ interface RulerProps {
 }
 
 const Ruler = ({}: RulerProps) => {
-  return (
-    <div>
-      <h2>{'Ruler'}</h2>
-      <p>{'Find me in ./web/src/components/Ruler/Ruler.tsx'}</p>
-    </div>
-  )
+  return <div className="border-b-2 border-b-black" />
 }
 
 export { Ruler, RulerProps }
