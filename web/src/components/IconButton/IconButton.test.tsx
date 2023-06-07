@@ -1,4 +1,4 @@
-import { render } from '@redwoodjs/testing/web'
+import { fireEvent, render, screen } from '@redwoodjs/testing/web'
 
 import { IconButton } from './IconButton'
 
@@ -8,7 +8,38 @@ import { IconButton } from './IconButton'
 describe('IconButton', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<IconButton />)
+      render(<IconButton handleClick={() => {}} name={'Bookmark'} />)
     }).not.toThrow()
+  })
+
+  it('defaults to toggled off', () => {
+    render(<IconButton handleClick={() => {}} name={'Bookmark'} />)
+    expect(screen.getByRole('button')).not.toHaveClass('bg-turquoise')
+  })
+
+  it('defaults to toggled on', () => {
+    render(
+      <IconButton handleClick={() => {}} name={'Bookmark'} toggled={true} />
+    )
+    expect(screen.getByRole('button')).toHaveClass('bg-turquoise')
+  })
+
+  it('handles the click', () => {
+    const onClick = jest.fn()
+    render(<IconButton handleClick={onClick} name={'Bookmark'} />)
+
+    // Default state
+    const button = screen.getByRole('button')
+    expect(button).not.toHaveClass('bg-turquoise')
+
+    // First click
+    fireEvent.click(button)
+    expect(onClick).toHaveBeenCalled()
+    expect(button).toHaveClass('bg-turquoise')
+
+    // Second click
+    fireEvent.click(button)
+    expect(onClick).toHaveBeenCalledTimes(2)
+    expect(button).not.toHaveClass('bg-turquoise')
   })
 })
