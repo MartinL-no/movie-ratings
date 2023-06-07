@@ -3,6 +3,9 @@ module.exports = {
   content: ['src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      backgroundPosition: {
+        centerCenter: 'center center',
+      },
       colors: {
         almostBlack: '#242424',
         lemonLime: '#E6FF00' /* safety green */,

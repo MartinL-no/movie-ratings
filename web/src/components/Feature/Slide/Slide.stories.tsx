@@ -13,5 +13,8 @@ const Template = (args: SlideProps) => <Slide {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
-  // args
+  image:
+    'https://www.themoviedb.org/t/p/original/lcTuggU70y6pt6x13Rv1Ffjs93K.jpg',
+  title: 'Money Heist: Korea - Joint Economic Area',
+  percentage: 89,
 }
