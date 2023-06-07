@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import { Icon } from '../Icon'
 import { Poster } from '../Poster/Poster'
 import { Ruler } from '../Ruler/'
@@ -8,8 +10,21 @@ interface NavProps {
 }
 
 const Nav = ({ handleClick }: NavProps) => {
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') handleClick()
+    }
+    document.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [])
   return (
-    <div className="h-screen w-screen overflow-scroll bg-almostBlack bg-[url('/images/flowers.png')] bg-left-bottom bg-no-repeat">
+    <div
+      data-testid="nav"
+      className="h-screen w-screen overflow-scroll bg-almostBlack bg-[url('/images/flowers.png')] bg-left-bottom bg-no-repeat"
+    >
       <div className="mx-auto grid max-w-pageWidth grid-cols-[minmax(0,_1fr)_minmax(0,_3fr)] gap-x-5 gap-y-8">
         <div className="col-span-2 pt-8">
           <button

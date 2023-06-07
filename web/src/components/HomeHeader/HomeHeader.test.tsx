@@ -1,4 +1,6 @@
-import { render } from '@redwoodjs/testing/web'
+import { act } from '@testing-library/react'
+
+import { render, screen } from '@redwoodjs/testing/web'
 
 import { HomeHeader } from './HomeHeader'
 
@@ -10,5 +12,13 @@ describe('HomeHeader', () => {
     expect(() => {
       render(<HomeHeader />)
     }).not.toThrow()
+  })
+
+  it('has a menu button that opens the nav', () => {
+    render(<HomeHeader />)
+    const menuButton = screen.getByText('MENU')
+    expect(screen.queryByTestId('nav')).not.toBeInTheDocument()
+    act(() => menuButton.click())
+    expect(screen.getByTestId('nav')).toBeInTheDocument()
   })
 })
