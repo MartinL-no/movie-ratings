@@ -3,6 +3,7 @@
 import type { ComponentMeta } from '@storybook/react'
 
 import { FeatureSlider, type FeatureSliderProps } from './FeatureSlider'
+import { data } from './FeatureSlider.mocks'
 
 export default {
   title: 'Components/FeatureSlider',
@@ -13,5 +14,5 @@ const Template = (args: FeatureSliderProps) => <FeatureSlider {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
-  // args
+  features: data,
 }
