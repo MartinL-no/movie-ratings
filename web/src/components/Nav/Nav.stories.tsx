@@ -9,7 +9,7 @@ export default {
   component: Nav,
 } as ComponentMeta<typeof Nav>
 
-const Template = (args) => <Nav {...args} />
+const Template = (args: NavProps) => <Nav {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
