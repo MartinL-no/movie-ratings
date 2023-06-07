@@ -1,13 +1,20 @@
+import { Icon } from '../Icon'
+
 interface HomeHeaderProps {
   // Props
 }
 
 const HomeHeader = ({}: HomeHeaderProps) => {
   return (
-    <div>
-      <h2>{'HomeHeader'}</h2>
-      <p>{'Find me in ./web/src/components/HomeHeader/HomeHeader.tsx'}</p>
-    </div>
+    <header className="flex justify-between">
+      <a href="/">
+        <img src="/images/logo.svg" alt="Rotten Ratings" />
+      </a>
+      <button className="mb-auto mt-0 flex items-center gap-x-5 hover:text-lemonLime">
+        MENU
+        <Icon name="hamburger" />
+      </button>
+    </header>
   )
 }
 

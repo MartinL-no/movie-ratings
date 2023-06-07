@@ -9,7 +9,7 @@ export default {
   component: HomeHeader,
 } as ComponentMeta<typeof HomeHeader>
 
-const Template = (args) => <HomeHeader {...args} />
+const Template = (args: HomeHeaderProps) => <HomeHeader {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
