@@ -35,4 +35,8 @@ export const slides = [
     alt: 'Dolphin Boy',
     src: 'https://www.themoviedb.org/t/p/w1280/gISoDEiaUH9BNEunmLC7FgUVaia.jpg',
   },
+  {
+    alt: 'The Adam Project',
+    src: 'https://www.themoviedb.org/t/p/original/y1zfDhKOMAtWhTrpaCVnjj3R4hX.jpg',
+  },
 ]
